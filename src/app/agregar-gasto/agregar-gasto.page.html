@@ -1,0 +1,29 @@
+
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Agregar Gasto</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form (ngSubmit)="agregarGasto()">
+    <ion-list>
+      <ion-item>
+        <ion-label position="floating">Descripción</ion-label>
+        <ion-input [(ngModel)]="nuevoGasto.descripcion" name="descripcion" required></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Monto</ion-label>
+        <ion-input type="number" [(ngModel)]="nuevoGasto.monto" name="monto" required></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Fecha</ion-label>
+        <ion-datetime display-format="DD/MM/YYYY" [(ngModel)]="nuevoGasto.fecha" name="fecha" required></ion-datetime>
+      </ion-item>
+    </ion-list>
+
+    <ion-button expand="full" type="submit">Agregar</ion-button>
+  </form>
+</ion-content>
