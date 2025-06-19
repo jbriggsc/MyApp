@@ -1,0 +1,10 @@
+<ion-header><ion-toolbar><ion-title>Agregar Gasto</ion-title></ion-toolbar></ion-header>
+<ion-content>
+  <ion-item><ion-label position="floating">Descripción</ion-label>
+    <ion-input [(ngModel)]="nuevoGasto.descripcion"></ion-input></ion-item>
+  <ion-item><ion-label position="floating">Monto</ion-label>
+    <ion-input type="number" [(ngModel)]="nuevoGasto.monto"></ion-input></ion-item>
+  <ion-item><ion-label position="floating">Fecha</ion-label>
+    <ion-datetime presentation="date" [(ngModel)]="nuevoGasto.fecha"></ion-datetime></ion-item>
+  <ion-button expand="full" (click)="agregarGasto()">Guardar</ion-button>
+</ion-content>

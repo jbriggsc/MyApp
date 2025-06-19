@@ -1,0 +1,17 @@
+
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Resumen de Gastos</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-card *ngFor="let gasto of listaGastos">
+    <ion-card-header>
+      <ion-card-title>{{ gasto.descripcion }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Monto: {{ gasto.monto | currency:'CLP' }} <br>
+      Vence: {{ gasto.fecha | date:'dd/MM/yyyy' }}
+    </ion-card-content>
+  </ion-card>
+</ion-content>
